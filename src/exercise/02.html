@@ -7,7 +7,12 @@
   <script type="module">
     const rootElement = document.getElementById('root')
     const elementType = 'div';
-    const elementProps = {className: 'container', children: 'Hello World'};
+    const elementProps = {
+      className: 'container',
+      children: [
+        React.createElement('span', {children: 'Hello'}),
+        React.createElement('span', {children: 'World'})
+      ]};
     const reactElement = React.createElement(elementType, elementProps);
 
     ReactDOM.render(reactElement, rootElement);
