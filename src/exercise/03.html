@@ -6,7 +6,8 @@
   <script type="text/babel">
     const className = 'container';
     const children = 'Hello World';
-    const element = <div className={className}>{children}</div>;
+    const props = {children, className};
+    const element = <div className={props.className}>{props.children}</div>;
 
     ReactDOM.render(element, document.getElementById('root'));
   </script>
